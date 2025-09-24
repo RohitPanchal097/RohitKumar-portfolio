@@ -2,7 +2,9 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>
+    <div
+    className='min-h-screen bg-background text-foreground  overflow-x-hidden'
+    >
         {/* THeme Toggle */}
 
         {/*Background Effects*/}

@@ -3,6 +3,7 @@ import ThemeToggle from './ThemeToggle'
 import StarBackground from './StarBackground'
 import "../index.css"
 import NavBar from './NavBar'
+import HeroSection from './HeroSection'
 
 const Home = () => {
   return (
@@ -16,7 +17,9 @@ const Home = () => {
         {/*Navbar*/}
         <NavBar />
         {/*Hero Section*/}
-
+        <main>
+          <HeroSection />
+        </main>
         {/*About Section*/}
 
         {/*Services Section*/}

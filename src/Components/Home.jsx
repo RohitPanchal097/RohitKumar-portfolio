@@ -1,4 +1,8 @@
 import React from 'react'
+import ThemeToggle from './ThemeToggle'
+import StarBackground from './StarBackground'
+import "../index.css"
+import NavBar from './NavBar'
 
 const Home = () => {
   return (
@@ -6,11 +10,11 @@ const Home = () => {
     className='min-h-screen bg-background text-foreground  overflow-x-hidden'
     >
         {/* THeme Toggle */}
-
+        <ThemeToggle />
         {/*Background Effects*/}
-
+        <StarBackground />
         {/*Navbar*/}
-
+        <NavBar />
         {/*Hero Section*/}
 
         {/*About Section*/}

@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import clsx from "clsx";
 
 const navItems = [
   {
@@ -25,73 +27,114 @@ const navItems = [
   },
 ];
 
-const NavBar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <nav className={`fixed w-full z-40 transition-all duration-300  ${isScrolled ? "py-3bg-background/80 backdrop-blur-md shadow-xs" : "py-5"}`}>
-      <div className="container flex items-center justify-between">
-        <a
-          className="font-bold text-xl text-primary flex items-center"
-          href="#hero"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground">Rohit</span> Portfolio
-          </span>
-        </a>
+  const handleNavClick = (href) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
-        {/* desktop nav */}
-        <div className="hidden md:flex  space-x-8">
-          {navItems.map((items, key) => (
+  return (
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={clsx(
+        "fixed left-1/2 transform -translate-x-1/2 z-[50] w-[90%] mt-4 px-4 py-2 rounded-xl border shadow-lg transition-all duration-300",
+        scrolled
+          ? "bg-white/80 dark:bg-gray-900/80 border-white/20 dark:border-gray-700 backdrop-blur-lg"
+          : "bg-transparent border-white/10"
+      )}
+    >
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="hidden md:flex items-center space-x-8 mx-auto">
+          {navItems.map((item) => (
             <a
-              key={key}
-              href={items.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              key={item.name}
+              href={item.href}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick(item.href);
+              }}
+              className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
             >
-              {items.name}
+              {item.name}
             </a>
           ))}
         </div>
 
-
-
-        {/* mobile menu button */}
         <button
-        onClick={() => setIsMenuOpen((prev) => !prev)}
-        className="md:hidden text-foreground hover:text-primary transition-colors duration-300 relative z-50"
+          className="md:hidden text-gray-700 dark:text-gray-300"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
         >
-        {isMenuOpen ? <X size={24}/> : <Menu size={24}/> }
+          <svg
+            className="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            {isMenuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
         </button>
-
-        
-        {/* mobile nav */}
-        
-        <div className={`fixed inset-0 z-40 flex items-center justify-center transition-all duration-300 md:hidden ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
-          <div className="flex flex-col items-center space-y-8 text-2xl">
-            {navItems.map((items, key) => (
-              <a
-                key={key}
-                href={items.href}
-                className="text-foreground hover:text-primary transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {items.name}
-              </a>
-            ))}
-          </div>
-        </div>
       </div>
-    </nav>
+
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="md:hidden px-4 pb-4"
+          >
+            <div className="flex flex-col space-y-4 items-center bg-background rounded-xl p-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.href);
+                  }}
+                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer "
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      
+    </motion.nav>
   );
 };
 
-export default NavBar;
+export default Navbar;

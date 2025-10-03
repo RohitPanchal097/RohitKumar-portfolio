@@ -1,81 +1,72 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
-    
-const StarBackground = () => {
-    const [stars, setStars] = useState([]);
-    const [meteors, setMeteors] = useState([]);
+import { useEffect, useRef } from "react";
 
-    useEffect(() =>{
-        generateStars();
-        generateMeteors();
-    },[]);
-    // Generate stars
-    const generateStars = () =>{
-        const numberOfStars = Math.floor(window.innerWidth * window.innerHeight / 10000);
-        const newStars = []
+export default function StarryBackground() {
+  const canvasRef = useRef(null);
 
-        for(let i = 0; i < numberOfStars; i++){
-            newStars.push({
-                id: i,
-                size: Math.random() * 3 + 1,
-                x: Math.random() * 100,
-                y: Math.random() * 100,
-                opacity: Math.random() * 0.5 + 0.5,
-                animationDuration: Math.random() * 4 + 2, 
-            })
-        }
-        setStars(newStars);
-    }
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    let animationFrameId;
 
-    // Meteor effect
-     // Generate meteors
-     const generateMeteors = () =>{
-      const numberOfMeteors = 4
-      const newMeteors = []
+    const setCanvasDimensions = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
 
-      for(let i = 0; i < numberOfMeteors; i++){
-          newMeteors.push({
-              id: i,
-              size: Math.random() * 2 + 1,
-              x: Math.random() * 100,
-              y: Math.random() * 20, // Random vertical position
-              delay: Math.random() * 15, // Longer delays between meteors
-              animationDuration: Math.random() * 3 + 3, // 3-5 seconds
-          })
+    const initParticles = () => {
+      particles = [];
+      const particleCount = 250;
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 1.5,
+          color: `rgba(255, 255, 255, ${Math.random() * 0.8})`,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+        });
       }
-      setMeteors(newMeteors);
-  }
+    };
+
+    const animate = () => {
+      if (!ctx) return;
+      // Clear canvas with dark background
+      ctx.fillStyle = '#0a0a0a';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      particles.forEach((particle) => {
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.fill();
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+      });
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    setCanvasDimensions();
+    initParticles();
+    animate();
+
+    window.addEventListener("resize", () => {
+      setCanvasDimensions();
+      initParticles();
+    });
+
+    return () => {
+      window.removeEventListener("resize", setCanvasDimensions);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
 
   return (
-    <div
-    className='fixed inset-0 overflow-hidden pointer-events-none z-0'
-    >
-        {stars.map((star)=>{
-            return <div key={star.id}
-            className='star animate-pulse-subtle'
-            style={{
-                width: `${star.size}px`,
-                height: `${star.size}px`,
-                opacity: star.opacity,
-                animationDuration: `${star.animationDuration}s`,
-                left: `${star.x}%`,
-                top: `${star.y}%`,
-            }} />
-        })}
-
-    {meteors.map((meteor)=>{
-        return <div key={meteor.id}
-        className='meteor animate-meteor'
-        style={{
-            width: `${meteor.size * 50}px`,
-            animationDelay: `${meteor.delay}s`,
-            animationDuration: `${meteor.animationDuration}s`,
-            left: `${meteor.x}%`,
-            top: `${meteor.y}%`,
-        }} />
-    })}
-    </div>
-  )
+    <canvas ref={canvasRef} className="fixed inset-0 z-0 pointer-events-none" />
+  );
 }
-
-export default StarBackground

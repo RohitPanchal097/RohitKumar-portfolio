@@ -67,19 +67,10 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 47% 11%;
-    --card: 0 0% 100%;
-    --card-hover: 0 0% 98%;
-    --primary: 250 47% 60%;
-    --primary-foreground: 210 40% 98%;
-    --border: 214 32% 91%;
-  }
-
-  .dark {
     --background: 222.2 47% 4%;
     --foreground: 213 31% 91%;
     --card: 222.2 47% 8%;
+    --card-hover: 222.2 47% 12%;
     --primary: 250 65% 65%;
     --primary-foreground: 213 32% 91%;
     --border: 217.2 33% 20%;
@@ -96,8 +87,10 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    transition: colors 0.3s;
     font-feature-settings: "rlig" 1, "calt" 1;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
   }
 }
 

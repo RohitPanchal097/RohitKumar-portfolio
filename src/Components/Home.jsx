@@ -1,6 +1,6 @@
 import React from 'react'
-import ThemeToggle from './ThemeToggle'
-import StarBackground from './StarBackground'
+
+import StarryBackground from './StarBackground'
 import "../index.css"
 import NavBar from './NavBar'
 import HeroSection from './HeroSection'
@@ -12,12 +12,12 @@ import CustomCursor from './CustomCursor'
 const Home = () => {
   return (
     <div
-    className='min-h-screen bg-background text-foreground  overflow-x-hidden'
+    className='min-h-screen bg-transparent text-foreground overflow-x-hidden'
     >
         {/* THeme Toggle */}
-        <ThemeToggle />
+        
         {/*Background Effects*/}
-        <StarBackground />
+        <StarryBackground />
         {/*Navbar*/}
         <CustomCursor />
         <NavBar />

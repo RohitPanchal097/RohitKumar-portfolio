@@ -6,6 +6,7 @@ import NavBar from './NavBar'
 import HeroSection from './HeroSection'
 import AboutSection from './AboutSection'
 import SkillsSection from './SkillsSection'
+import ProjectSection from './ProjectSection'
 
 const Home = () => {
   return (
@@ -23,7 +24,7 @@ const Home = () => {
           <HeroSection />
           <AboutSection />
           <SkillsSection />
-          
+          <ProjectSection />
         </main>
         {/*About Section*/}
 

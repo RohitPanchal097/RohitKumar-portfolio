@@ -7,7 +7,8 @@ import HeroSection from './HeroSection'
 import AboutSection from './AboutSection'
 import SkillsSection from './SkillsSection'
 import ProjectSection from './ProjectSection'
-
+import ContactSection from './ContactSection'
+import CustomCursor from './CustomCursor'
 const Home = () => {
   return (
     <div
@@ -18,6 +19,7 @@ const Home = () => {
         {/*Background Effects*/}
         <StarBackground />
         {/*Navbar*/}
+        <CustomCursor />
         <NavBar />
         {/*Hero Section*/}
         <main>
@@ -25,6 +27,7 @@ const Home = () => {
           <AboutSection />
           <SkillsSection />
           <ProjectSection />
+          <ContactSection />
         </main>
         {/*About Section*/}
 

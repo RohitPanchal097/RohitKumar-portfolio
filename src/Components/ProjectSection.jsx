@@ -9,7 +9,7 @@ const projects = [
     image: "/src/assets/My-Portfolio.png",
     tags: ["React", "Tailwind", "JavaScript", "Framer Motion", ],
     github: "https://github.com/rohitpanchal8535/My-Portfolio",
-    live: "https://www.google.com",
+    live: "https://rohit-kumar-portfolio-lake.vercel.app/",
   },
   {
     id: 2,

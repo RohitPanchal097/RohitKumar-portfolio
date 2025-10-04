@@ -4,11 +4,11 @@ import { ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Project 1",
-    description: "Project 1 description",
-    image: "/src/assets/project-1.png",
-    tags: ["React", "Tailwind", "TypeScript"],
-    github: "https://www.google.com",
+    title: "Portfolio",
+    description: "Portfolio website",
+    image: "/src/assets/My-Portfolio.png",
+    tags: ["React", "Tailwind", "JavaScript", "Framer Motion", ],
+    github: "https://github.com/rohitpanchal8535/My-Portfolio",
     live: "https://www.google.com",
   },
   {

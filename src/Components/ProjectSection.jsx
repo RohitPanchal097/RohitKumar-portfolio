@@ -1,12 +1,15 @@
 import { div } from "framer-motion/client";
 import React from "react";
 import { ExternalLink, Github } from "lucide-react";
+import portfolioImage from "../assets/My-Portfolio.png";
+import project2Image from "../assets/project-2.png";
+import project3Image from "../assets/project-3.png";
 const projects = [
   {
     id: 1,
     title: "Portfolio",
     description: "Portfolio website",
-    image: "/src/assets/My-Portfolio.png",
+    image: portfolioImage,
     tags: ["React", "Tailwind", "JavaScript", "Framer Motion", ],
     github: "https://github.com/rohitpanchal8535/My-Portfolio",
     live: "https://rohit-kumar-portfolio-lake.vercel.app/",
@@ -15,7 +18,7 @@ const projects = [
     id: 2,
     title: "Project 2",
     description: "Project 2 description",
-    image: "/src/assets/project-2.png",
+    image: project2Image,
     tags: ["React", "Tailwind", "TypeScript"],
     github: "https://www.google.com",
     live: "https://www.google.com",
@@ -24,7 +27,7 @@ const projects = [
     id: 3,
     title: "Project 3",
     description: "Project 3 description",
-    image: "/src/assets/project-3.png",
+    image: project3Image,
     tags: ["React", "Tailwind", "TypeScript"],
     github: "https://www.google.com",
     live: "https://www.google.com",

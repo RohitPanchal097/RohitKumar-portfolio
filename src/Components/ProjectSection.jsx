@@ -34,13 +34,17 @@ const projects = [
 const ProjectSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          Featured <span className="text-primary">Projects</span>
-        </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Explore my latest projects showcasing my skills and expertise
-        </p>
+      <div className="container mx-auto max-w-7xl">
+      <div className='text-center mb-16 relative z-20'>
+          <div className='bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg'>
+              My <span className='text-purple-400'>Projects</span>
+            </h2>
+            <p className='text-white text-lg max-w-2xl mx-auto drop-shadow-md'>
+              Explore my latest projects showcasing my skills and expertise
+            </p>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (

@@ -9,6 +9,9 @@ import SkillsSection from './SkillsSection'
 import ProjectSection from './ProjectSection'
 import ContactSection from './ContactSection'
 import CustomCursor from './CustomCursor'
+import ChatBot from './ChatBot'
+import Spline from '@splinetool/react-spline';
+
 const Home = () => {
   return (
     <div
@@ -23,6 +26,7 @@ const Home = () => {
         <NavBar />
         {/*Hero Section*/}
         <main>
+          
           <HeroSection />
           <AboutSection />
           <SkillsSection />
@@ -38,6 +42,9 @@ const Home = () => {
         {/*Contact Section*/}
 
         {/*Footer*/}
+        
+        {/*ChatBot*/}
+        <ChatBot  />
     </div>
   )
 }

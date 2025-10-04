@@ -3,16 +3,23 @@ import { Mail, Phone } from 'lucide-react'
 
 const ContactSection = () => {
   return (
-    <section id='contact' className='py-24 px-4 relative bg-secondary/30'>
-      <h2 className='text-3xl md:text-4xl font-bold mb-4 text-center'>Get in <span className='text-primary'>Touch</span> </h2>
-      <p className='text-center text-muted-foreground mb-12 max-w-2xl mx-auto'>
-        I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
-      </p>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
-        <div className='space-y-8'>
+    <section id='contact' className='py-24 px-4 relative bg-secondary/30 max-w-7xl mx-auto'>
+      <div className='text-center mb-16 relative z-20 '>
+          <div className='bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg'>
+              Get in <span className='text-purple-400'>Touch</span>
+            </h2>
+            <p className='text-white text-lg max-w-2xl mx-auto drop-shadow-md'>
+              I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+          </div>
+        </div>
+     
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 items-center '>
+        <div className='space-y-8 mx-auto' >
           <h3 className='text-2xl font-semibold mb-6'>Contact Information</h3>
           <div className='space-y-6 justify-center'>
-            <div className='flex items-start space-x-4'>
+            <div className='flex items-center space-x-4'>
               <div className='p-3 rounded-full bg-primary/10'>
                 <Mail className='w-6 h-6 text-primary' />
               </div>
@@ -23,7 +30,7 @@ const ContactSection = () => {
                 >rohitpanchal.8535@gmail.com</a>
               </div>
             </div>
-            <div className='flex items-start space-x-4'>
+              <div className='flex items-center space-x-16 text-center'>
               <div className='p-3 rounded-full bg-primary/10'>
                 <Phone className='w-6 h-6 text-primary' />
               </div>

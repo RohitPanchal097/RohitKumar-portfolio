@@ -40,11 +40,20 @@ export const Navbar = () => {
   }, []);
 
   const handleNavClick = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Close mobile menu first
     setIsMenuOpen(false);
+    
+    // Small delay to ensure menu closes before scrolling
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+      }
+    }, 100);
   };
 
   return (
@@ -62,9 +71,8 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="hidden md:flex items-center space-x-8 mx-auto">
           {navItems.map((item) => (
-            <a
+            <button
               key={item.name}
-              href={item.href}
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick(item.href);
@@ -72,7 +80,7 @@ export const Navbar = () => {
               className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
             >
               {item.name}
-            </a>
+            </button>
           ))}
         </div>
 
@@ -112,21 +120,20 @@ export const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden px-4 pb-4"
+            className="md:hidden px-4 pb-4 relative z-[60]"
           >
-            <div className="flex flex-col space-y-4 items-center bg-background rounded-xl p-4">
+            <div className="flex flex-col space-y-4 items-center bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg rounded-xl p-4 border border-white/20 dark:border-gray-700 shadow-lg">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
                   onClick={(e) => {
                     e.preventDefault();
                     handleNavClick(item.href);
                   }}
-                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer "
+                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer w-full py-2 px-4 rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
             </div>
           </motion.div>

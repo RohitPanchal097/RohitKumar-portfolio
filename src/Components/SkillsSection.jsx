@@ -90,7 +90,7 @@ const SkillsSection = () => {
   ]
 
   return (
-    <section className='py-20 px-4 relative z-10'>
+    <section className='py-20 px-4 relative z-10 ' id='skills'>
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
         <div className='text-center mb-16 relative z-20'>
@@ -105,7 +105,7 @@ const SkillsSection = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6'>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-center '>
           {skills.map((skill, index) => (
             <div
               key={index}
@@ -121,7 +121,7 @@ const SkillsSection = () => {
               }}
             >
               {/* Icon */}
-              <div className={`${skill.color} mb-3 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`${skill.color} mb-3 group-hover:scale-110 transition-transform duration-300 mx-10`}>
                 {skill.icon}
               </div>
               

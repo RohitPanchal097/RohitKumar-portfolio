@@ -5,6 +5,7 @@ import portfolioImage from "../assets/My-Portfolio.png";
 import project4Image from "../assets/project-4.png";
 import project3Image from "../assets/trader-website.png";
 import project1Image from "../assets/project-1.png";
+import project5Image from "../assets/Stiplindia.png";
 const projects = [
   {
     id: 1,
@@ -42,6 +43,14 @@ const projects = [
      github: "https://github.com/RohitPanchal097/Gym-Website-React",
      live: "https://gym-website-wheat-nine.vercel.app/"
 
+  },
+  {
+    id: 5,
+    title: "Maching Inventory Website",
+    description: "Machine Inventory Management System with Enquiry Form",
+    image: project5Image,
+    tags: ["Wordpress, CPT, ACF, PHP"],
+    live: "https://stiplindia.com/"
   }
 ];
 

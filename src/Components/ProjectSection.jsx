@@ -2,8 +2,9 @@ import { div } from "framer-motion/client";
 import React from "react";
 import { ExternalLink, Github } from "lucide-react";
 import portfolioImage from "../assets/My-Portfolio.png";
-import project2Image from "../assets/project-2.png";
-import project3Image from "../assets/project-3.png";
+import project4Image from "../assets/project-4.png";
+import project3Image from "../assets/trader-website.png";
+import project1Image from "../assets/project-1.png";
 const projects = [
   {
     id: 1,
@@ -18,7 +19,7 @@ const projects = [
     id: 2,
     title: "Movie-Website",
     description: "Movie website",
-    image: project2Image,
+    image: project4Image,
     tags: ["React", "Tailwind", "JavaScript", "API", "Framer Motion"],
     github: "https://github.com/RohitPanchal097/Movie-Website",
     live: "https://movie-website-two-nu.vercel.app/",
@@ -32,6 +33,16 @@ const projects = [
     github: "#",
     live: "https://www.dilsetrader.in/",
   },
+  {
+    id: 4,
+    title: "Gym-Website",
+    description: "Gym website",
+    image: project1Image,
+     tags: ["React", "Tailwind", "JavaScript", "Framer Motion",],
+     github: "https://github.com/RohitPanchal097/Gym-Website-React",
+     live: "https://gym-website-wheat-nine.vercel.app/"
+
+  }
 ];
 
 const ProjectSection = () => {

@@ -7,23 +7,34 @@ import project3Image from "../assets/trader-website.png";
 import project1Image from "../assets/project-1.png";
 import project5Image from "../assets/Stiplindia.png";
 const projects = [
+  
   {
     id: 1,
-    title: "Portfolio",
-    description: "Portfolio website",
-    image: portfolioImage,
-    tags: ["React", "Tailwind", "JavaScript", "Framer Motion", ],
-    github: "https://github.com/rohitpanchal8535/My-Portfolio",
-    live: "https://rohit-kumar-portfolio-lake.vercel.app/",
-  },
-  {
-    id: 2,
     title: "Movie-Website",
     description: "Movie website",
     image: project4Image,
     tags: ["React", "Tailwind", "JavaScript", "API", "Framer Motion"],
     github: "https://github.com/RohitPanchal097/Movie-Website",
     live: "https://movie-website-two-nu.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Gym-Website",
+    description: "Gym website",
+    image: project1Image,
+     tags: ["React", "Tailwind", "JavaScript", "Framer Motion",],
+     github: "https://github.com/RohitPanchal097/Gym-Website-React",
+     live: "https://gym-website-wheat-nine.vercel.app/"
+
+  },
+  {
+    id: 3,
+    title: "Accessibility-Tested Portfolio",
+    description: "Personal portfolio website with comprehensive accessibility testing following WCAG 2.2 guidelines. Tested with NVDA , ANDI , Axe DevTools.",
+    image: portfolioImage,
+    tags: ["WCAG 2.2", "NVDA", "ANDI", "Axe DevTools", "ARIA", "Keyboard Accessibility", "React", "Tailwind"],
+    github: "https://github.com/rohitpanchal8535/My-Portfolio",
+    live: "https://rohit-kumar-portfolio-lake.vercel.app/",
   },
   {
     id: 3,
@@ -34,16 +45,7 @@ const projects = [
     github: "#",
     live: "https://www.dilsetrader.in/",
   },
-  {
-    id: 4,
-    title: "Gym-Website",
-    description: "Gym website",
-    image: project1Image,
-     tags: ["React", "Tailwind", "JavaScript", "Framer Motion",],
-     github: "https://github.com/RohitPanchal097/Gym-Website-React",
-     live: "https://gym-website-wheat-nine.vercel.app/"
-
-  },
+  
   {
     id: 5,
     title: "Maching Inventory Website",
@@ -56,15 +58,15 @@ const projects = [
 
 const ProjectSection = () => {
   return (
-    <section id="projects" className="py-24 px-4 relative">
+    <section id="projects" className="py-24 px-4 relative" aria-labelledby="projects-heading">
       <div className="container mx-auto max-w-7xl">
       <div className='text-center mb-16 relative z-20'>
           <div className='bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg'>
+            <h2 id="projects-heading" className='text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg'>
               My <span className='text-purple-400'>Projects</span>
             </h2>
             <p className='text-white text-lg max-w-2xl mx-auto drop-shadow-md'>
-              Explore my latest projects showcasing my skills and expertise
+              Explore my projects with a focus on accessibility testing and inclusive web development
             </p>
           </div>
         </div>
@@ -92,14 +94,16 @@ const ProjectSection = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-              <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+              <p className="text-normal-contrast text-sm mb-4">{project.description}</p>
               <div className="flex justify-between items-center px-6 pb-4">
                 <div className="flex space-x-2">
-                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                  <ExternalLink size={20} />
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" role="link" className="text-normal-contrast hover:text-primary transition-colors duration-300" aria-label={`View ${project.title} live project`}>
+                  <ExternalLink size={20} aria-hidden="true" />
+                  <span className="sr-only">View {project.title} live project</span>
                   </a>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                  <Github size={20} />
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" role="link" className="text-normal-contrast hover:text-primary transition-colors duration-300" aria-label={`View ${project.title} on GitHub`}>
+                  <Github size={20} aria-hidden="true" />
+                  <span className="sr-only">View {project.title} on GitHub</span>
                   </a>
                 </div>
               </div>

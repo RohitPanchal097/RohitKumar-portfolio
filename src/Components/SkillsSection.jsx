@@ -1,8 +1,52 @@
 import React from 'react'
 import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTailwindcss, SiGit, SiGithub, SiBootstrap, SiPostman, SiRedux, SiWordpress, SiShopify } from 'react-icons/si'
+import { FaAccessibleIcon, FaKeyboard, FaEye } from 'react-icons/fa'
 
 const SkillsSection = () => {
   const skills = [
+    {
+      name: "WCAG 2.2",
+      icon: <FaKeyboard className='w-12 h-12' />,
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-400/10',
+      borderColor: 'border-yellow-400/20'
+    },
+    {
+      name: "NVDA",
+      icon: <FaEye className='w-12 h-12' />,
+      color: 'text-indigo-500',
+      bgColor: 'bg-indigo-500/10',
+      borderColor: 'border-indigo-500/20'
+    },
+    {
+      name: "ANDI",
+      icon: <FaKeyboard className='w-12 h-12' />,
+      color: 'text-teal-500',
+      bgColor: 'bg-teal-500/10',
+      borderColor: 'border-teal-500/20'
+    },
+    {
+      name: "Axe DevTools",
+      icon: <FaAccessibleIcon className='w-12 h-12' />,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-400/10',
+      borderColor: 'border-blue-400/20'
+    },
+    {
+      name: "Keyboard Accessibility",
+      icon: <FaKeyboard className='w-12 h-12' />,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-400/10',
+      borderColor: 'border-purple-400/20'
+    },
+  
+    {
+      name: "Accessibility Testing",
+      icon: <FaAccessibleIcon className='w-12 h-12' />,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-400/10',
+      borderColor: 'border-blue-400/20'
+    },
     {
       name: "HTML",
       icon: <SiHtml5 className='w-12 h-12' />,
@@ -80,6 +124,7 @@ const SkillsSection = () => {
       bgColor: 'bg-blue-600/10',
       borderColor: 'border-blue-600/20'
     },
+
     {
       name: "Shopify",
       icon: <SiShopify className='w-12 h-12' />,
@@ -90,16 +135,16 @@ const SkillsSection = () => {
   ]
 
   return (
-    <section className='py-20 px-4 relative z-10 ' id='skills'>
+    <section className='py-20 px-4 relative z-10 ' id='skills' aria-labelledby="skills-heading">
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
         <div className='text-center mb-16 relative z-20'>
           <div className='bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg'>
+            <h2 id="skills-heading" className='text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg'>
               My <span className='text-purple-400'>Skills</span>
             </h2>
             <p className='text-white text-lg max-w-2xl mx-auto drop-shadow-md'>
-              Technologies and tools I work with to bring ideas to life
+              Technologies, tools, and testing frameworks I use to ensure accessible and high-quality web applications
             </p>
           </div>
         </div>
@@ -121,7 +166,7 @@ const SkillsSection = () => {
               }}
             >
               {/* Icon */}
-              <div className={`${skill.color} mb-3 group-hover:scale-110 transition-transform duration-300 mx-10`}>
+              <div className={`${skill.color} mb-3 group-hover:scale-110 transition-transform duration-300 mx-10`} aria-hidden="true">
                 {skill.icon}
               </div>
               

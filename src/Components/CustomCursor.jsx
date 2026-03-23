@@ -64,7 +64,7 @@ return (
         />
         <div
             ref={cursorBorderRef}
-            className='fixed top-0 left-0 w-[40px] h-[40px] rounded-full border border-white  z-999 pointer-events-none  mix-blend-difference opacity-50'
+            className='fixed top-0 left-0 w-[40px] h-[40px] rounded-full border border-white  z-999 pointer-events-none  mix-blend-difference opacity-75'
         />
     </>
 );

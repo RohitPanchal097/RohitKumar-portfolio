@@ -8,6 +8,12 @@
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-card: hsl(var(--card));
 
+  /* WCAG 2.2 AA Compliant Colors */
+  --color-text-high-contrast: #ffffff; /* White text for maximum contrast */
+  --color-text-normal: #e5e7eb; /* Light gray for normal text - 4.5:1 contrast on dark bg */
+  --color-text-muted: #b4b9c2; /* Updated medium gray for muted text - 4.5:1 contrast on dark bg (was #9ca3af) */
+  --color-bg-dark: #0f172a; /* Dark background */
+
   --animate-float: float 3s ease-in-out infinite;
   --animate-pulse-subtle: pulse-subtle 2s ease-in-out infinite;
   --animate-fade-in: fade-in 0.7s ease-out forwards;
@@ -48,6 +54,47 @@
     opacity: 1;
     transform: translateY(0px);
   }
+}
+
+/* WCAG 2.2 AA Contrast Compliance Classes */
+.text-high-contrast {
+  color: var(--color-text-high-contrast);
+}
+
+.text-normal-contrast {
+  color: var(--color-text-normal);
+}
+
+.text-muted-contrast {
+  color: var(--color-text-muted);
+}
+
+/* Ensure focus indicators meet 3:1 contrast ratio */
+.focus-high-contrast:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.focus-purple-contrast:focus {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+}
+
+/* Ensure buttons and interactive elements have proper contrast */
+.btn-high-contrast {
+  background-color: #a855f7;
+  color: #ffffff;
+  border: 2px solid #a855f7;
+}
+
+.btn-high-contrast:hover {
+  background-color: #9333ea;
+  border-color: #9333ea;
+}
+
+.btn-high-contrast:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
 @keyframes meteor {
@@ -123,10 +170,10 @@
   padding: 0.5rem 1.5rem;
   border-radius: 9999px;
   background-color: #8b5cf6;
-  color: hsl(var(--primary-foreground));
-  font-weight: 500;
+  color: #ffffff; /* strong contrast for button text */
+  font-weight: 600;
   transition: all 0.3s;
-  box-shadow: 0 0 10px rgba(139,92,246,0.5);
+  box-shadow: 0 0 12px rgba(139,92,246,0.65);
 }
 
 .cosmic-button:hover {

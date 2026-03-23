@@ -23,9 +23,9 @@ const HeroSection = () => {
                 </h1>
 
                 <p
-                className='text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3'
+                className='text-lg md:text-xl text-normal-contrast max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3'
                 >
-                    I'm a frontend developer with a passion for creating beautiful and functional web applications. I'm a quick learner and I'm always looking to improve my skills.
+                    I'm an accessibility tester with expertise in ensuring web applications are inclusive and usable for everyone. My main focus is on testing, auditing, and fixing accessibility issues before development handoff, with secondary frontend development skills to support accessible implementation.
                 </p>
 
                 <div className='pt-4 opacity-0 animate-fade-in-delay-4'>
@@ -39,8 +39,8 @@ const HeroSection = () => {
                 <div
                 className='absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce'
                 >
-                    <span className='text-sm text-muted-foreground mb-2'>Scroll</span>
-                    <ArrowDown className='w-5 h-5 text-primary' />
+                    <span className='text-normal-contrast mb-2'>Scroll</span>
+                    <ArrowDown className='w-5 h-5 text-primary' aria-hidden="true" />
                 </div>
 
             </div>

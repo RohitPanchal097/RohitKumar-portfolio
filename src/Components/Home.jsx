@@ -17,34 +17,38 @@ const Home = () => {
     <div
     className='min-h-screen bg-transparent text-foreground overflow-x-hidden'
     >
-        {/* THeme Toggle */}
-        
+        {/* Skip to main content link */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-purple-400"
+        >
+          Skip to main content
+        </a>
+
         {/*Background Effects*/}
         <StarryBackground />
-        {/*Navbar*/}
-        <CustomCursor />
-        <NavBar />
-        {/*Hero Section*/}
-        <main>
-          
+
+        {/*Navbar - Header landmark */}
+        <header>
+          <CustomCursor />
+          <NavBar />
+        </header>
+
+        {/*Hero Section - Main content starts here */}
+        <main id="main-content">
           <HeroSection />
           <AboutSection />
           <SkillsSection />
           <ProjectSection />
-          <ContactSection />
         </main>
-        {/*About Section*/}
 
-        {/*Services Section*/}
+        {/*Contact Section - Footer landmark outside main */}
+        <ContactSection />
 
-        {/*Projects Section*/}
-
-        {/*Contact Section*/}
-
-        {/*Footer*/}
-        
-        {/*ChatBot*/}
-        <ChatBot  />
+        {/*ChatBot - Complementary landmark for auxiliary content */}
+        <aside aria-label="Chat assistance">
+          <ChatBot />
+        </aside>
     </div>
   )
 }

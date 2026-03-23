@@ -1,16 +1,43 @@
-# React + Vite
+# Rohit Panchal - Accessibility Tester Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website showcasing my work as an accessibility tester. Built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I'm an accessibility tester specializing in ensuring web applications are inclusive and accessible to all users. This portfolio demonstrates my expertise in accessibility testing, frontend development, and quality assurance.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Responsive Design**: Optimized for all devices
+- **Accessibility Focused**: Built with accessibility best practices
+- **Modern UI**: Clean, professional design with smooth animations
+- **Interactive Elements**: Custom cursor, chatbot, and engaging user interactions
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 18
+- Vite
+- Tailwind CSS
+- React Icons
+- Lucide Icons
+
+## Skills Highlighted
+
+- **Frontend Development**: HTML, CSS, JavaScript, React, Redux
+- **Styling**: Tailwind CSS, Bootstrap
+- **Version Control**: Git, GitHub
+- **Testing Tools**: Axe DevTools
+- **Accessibility Tools**: NVDA, ANDI, WCAG 2.2, Keyboard Accessibility
+- **API Testing**: Postman
+- **CMS**: WordPress, Shopify
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start development server: `npm run dev`
+4. Build for production: `npm run build`
+
+## Contact
+
+Feel free to reach out for accessibility consulting, testing services, or collaboration opportunities.

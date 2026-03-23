@@ -18,7 +18,8 @@ const ChatBot = () => {
             onClick={() => setIsOpen(true)}
             className="w-14 h-14 rounded-full bg-purple-600 text-white flex items-center justify-center 
             shadow-[0_0_15px_3px_rgba(192,132,252,0.8)] 
-            transition duration-300 hover:scale-105"
+            transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2"
+            aria-label="Open chatbot"
             title="Ask Chatbot"
           >
             <MessageCircle className="w-6 h-6" />
@@ -37,7 +38,8 @@ const ChatBot = () => {
             </h2>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-sm text-red-500 hover:text-red-700 font-bold"
+              className="text-sm text-red-500 hover:text-red-700 font-bold focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 rounded"
+              aria-label="Close chatbot"
             >
               ✖
             </button>
@@ -48,12 +50,14 @@ const ChatBot = () => {
               <div key={idx}>
                 <button
                   onClick={() => toggleQuestion(idx)}
-                  className="w-full text-left bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 p-2 rounded-md hover:bg-purple-100 dark:hover:bg-purple-800 transition"
+                  className="w-full text-left bg-gray-100 dark:bg-gray-800 text-high-contrast p-2 rounded-md hover:bg-purple-100 dark:hover:bg-purple-800 transition focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2"
+                  aria-expanded={openIndex === idx}
+                  aria-controls={`answer-${idx}`}
                 >
                   {question}
                 </button>
                 {openIndex === idx && (
-                  <div className="mt-2 ml-2 text-sm bg-purple-50 dark:bg-purple-900 p-2 rounded text-purple-900 dark:text-purple-100">
+                  <div id={`answer-${idx}`} className="mt-2 ml-2 text-sm bg-purple-50 dark:bg-purple-900 p-2 rounded text-high-contrast">
                     {answer}
                   </div>
                 )}

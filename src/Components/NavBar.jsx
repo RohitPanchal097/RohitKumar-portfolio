@@ -67,6 +67,7 @@ export const Navbar = () => {
           ? "bg-white/80 dark:bg-gray-900/80 border-white/20 dark:border-gray-700 backdrop-blur-lg"
           : "bg-transparent border-white/10"
       )}
+      aria-label="Main navigation"
     >
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="hidden md:flex items-center space-x-8 mx-auto">
@@ -77,7 +78,7 @@ export const Navbar = () => {
                 e.preventDefault();
                 handleNavClick(item.href);
               }}
-              className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
+              className="text-sm font-medium text-normal-contrast hover:text-purple-400 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-2 py-1"
             >
               {item.name}
             </button>
@@ -85,9 +86,10 @@ export const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden text-gray-700 dark:text-gray-300"
+          className="md:hidden text-normal-contrast focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md p-1"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
         >
           <svg
             className="h-6 w-6"
@@ -130,7 +132,7 @@ export const Navbar = () => {
                     e.preventDefault();
                     handleNavClick(item.href);
                   }}
-                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer w-full py-2 px-4 rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20"
+                  className="text-sm font-medium text-normal-contrast hover:text-purple-400 transition-colors cursor-pointer w-full py-2 px-4 rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-gray-900"
                 >
                   {item.name}
                 </button>

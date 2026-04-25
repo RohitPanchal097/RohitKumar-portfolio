@@ -25,7 +25,7 @@ const HeroSection = () => {
                 <p
                 className='text-lg md:text-xl text-normal-contrast max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3'
                 >
-                    I'm an accessibility tester with expertise in ensuring web applications are inclusive and usable for everyone. My main focus is on testing, auditing, and fixing accessibility issues before development handoff, with secondary frontend development skills to support accessible implementation.
+                    I'm a passionate frontend developer crafting beautiful, responsive web applications. I specialize in modern web technologies like React, Tailwind CSS, and JavaScript to create engaging user experiences and high-performance solutions.
                 </p>
 
                 <div className='pt-4 opacity-0 animate-fade-in-delay-4'>

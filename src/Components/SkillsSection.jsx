@@ -5,49 +5,6 @@ import { FaAccessibleIcon, FaKeyboard, FaEye } from 'react-icons/fa'
 const SkillsSection = () => {
   const skills = [
     {
-      name: "WCAG 2.2",
-      icon: <FaKeyboard className='w-12 h-12' />,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-400/10',
-      borderColor: 'border-yellow-400/20'
-    },
-    {
-      name: "NVDA",
-      icon: <FaEye className='w-12 h-12' />,
-      color: 'text-indigo-500',
-      bgColor: 'bg-indigo-500/10',
-      borderColor: 'border-indigo-500/20'
-    },
-    {
-      name: "ANDI",
-      icon: <FaKeyboard className='w-12 h-12' />,
-      color: 'text-teal-500',
-      bgColor: 'bg-teal-500/10',
-      borderColor: 'border-teal-500/20'
-    },
-    {
-      name: "Axe DevTools",
-      icon: <FaAccessibleIcon className='w-12 h-12' />,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-400/10',
-      borderColor: 'border-blue-400/20'
-    },
-    {
-      name: "Keyboard Accessibility",
-      icon: <FaKeyboard className='w-12 h-12' />,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-400/10',
-      borderColor: 'border-purple-400/20'
-    },
-  
-    {
-      name: "Accessibility Testing",
-      icon: <FaAccessibleIcon className='w-12 h-12' />,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-400/10',
-      borderColor: 'border-blue-400/20'
-    },
-    {
       name: "HTML",
       icon: <SiHtml5 className='w-12 h-12' />,
       color: 'text-orange-500',
@@ -124,13 +81,47 @@ const SkillsSection = () => {
       bgColor: 'bg-blue-600/10',
       borderColor: 'border-blue-600/20'
     },
-
     {
       name: "Shopify",
       icon: <SiShopify className='w-12 h-12' />,
       color: 'text-green-500',
       bgColor: 'bg-green-500/10',
       borderColor: 'border-green-500/20'
+    },
+    {
+      name: "WCAG 2.2",
+      icon: <FaKeyboard className='w-12 h-12' />,
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-400/10',
+      borderColor: 'border-yellow-400/20'
+    },
+    {
+      name: "NVDA",
+      icon: <FaEye className='w-12 h-12' />,
+      color: 'text-indigo-500',
+      bgColor: 'bg-indigo-500/10',
+      borderColor: 'border-indigo-500/20'
+    },
+    {
+      name: "ANDI",
+      icon: <FaKeyboard className='w-12 h-12' />,
+      color: 'text-teal-500',
+      bgColor: 'bg-teal-500/10',
+      borderColor: 'border-teal-500/20'
+    },
+    {
+      name: "Axe DevTools",
+      icon: <FaAccessibleIcon className='w-12 h-12' />,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-400/10',
+      borderColor: 'border-blue-400/20'
+    },
+    {
+      name: "Keyboard Accessibility",
+      icon: <FaKeyboard className='w-12 h-12' />,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-400/10',
+      borderColor: 'border-purple-400/20'
     }
   ]
 

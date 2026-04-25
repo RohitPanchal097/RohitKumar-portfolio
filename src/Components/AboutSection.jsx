@@ -21,9 +21,9 @@ const AboutSection = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
               <div className='space-y-6'>
-                <h3 className='text-2xl font-semibold'>Accessibility Specialist</h3>
+                <h3 className='text-2xl font-semibold'>Frontend Developer</h3>
           <p className='text-normal-contrast'>
-            I'm a dedicated accessibility tester focused on making web applications inclusive and accessible to all users. I lead accessibility testing and audit cycles using Axe, ANDI, NVDA, and WCAG guidelines, then collaborate with developers to remediate issues, giving testing priority over pure development tasks.
+            I'm a passionate frontend developer with expertise in building modern web applications. I specialize in React, JavaScript, and CSS to create responsive, user-friendly interfaces. I focus on clean code, performance optimization, and delivering high-quality solutions that exceed expectations.
           </p>
 
           <div className='flex flex-col sm:flex-row gap-4 pt-4 justify-center'>
@@ -40,9 +40,9 @@ const AboutSection = () => {
               <Code className='w-6 h-6 text-primary' aria-hidden="true" />
               </div>
               <div className='text-left'>
-                <h4 className='text-lg font-semibold'>Accessibility Testing</h4>
+                <h4 className='text-lg font-semibold'>Web Development</h4>
                 <p className='text-normal-contrast'>
-                conducting WCAG 2.2 audit cycles with Axe DevTools, ANDI, NVDA and ARIA best practices. I ensure keyboard-only navigation, ARIA roles/labels, screen reader compatibility, and quality across other screen readers like VoiceOver.
+                Building responsive, scalable web applications using React, JavaScript, and modern CSS frameworks. I create efficient, maintainable code and focus on delivering high-performance solutions that provide excellent user experiences.
                 </p>
               </div>
             </div>

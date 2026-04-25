@@ -7,9 +7,25 @@ import project3Image from "../assets/trader-website.png";
 import project1Image from "../assets/project-1.png";
 import project5Image from "../assets/Stiplindia.png";
 const projects = [
-  
   {
     id: 1,
+    title: "Trader-Website",
+    description: "Trader website",
+    image: project3Image,
+    tags: ["React", "Tailwind", "JavaScript", "Framer Motion",],
+    github: "#",
+    live: "https://www.dilsetrader.in/",
+  },
+  {
+    id: 2,
+    title: "Maching Inventory Website",
+    description: "Machine Inventory Management System with Enquiry Form",
+    image: project5Image,
+    tags: ["Wordpress, CPT, ACF, PHP"],
+    live: "https://stiplindia.com/"
+  },
+  {
+    id: 3,
     title: "Movie-Website",
     description: "Movie website",
     image: project4Image,
@@ -18,7 +34,7 @@ const projects = [
     live: "https://movie-website-two-nu.vercel.app/",
   },
   {
-    id: 2,
+    id: 4,
     title: "Gym-Website",
     description: "Gym website",
     image: project1Image,
@@ -28,31 +44,13 @@ const projects = [
 
   },
   {
-    id: 3,
-    title: "Accessibility-Tested Portfolio",
-    description: "Personal portfolio website with comprehensive accessibility testing following WCAG 2.2 guidelines. Tested with NVDA , ANDI , Axe DevTools.",
+    id: 5,
+    title: "Personal Portfolio",
+    description: "Modern portfolio website showcasing my projects and skills built with React, Tailwind CSS, and Framer Motion for smooth animations and interactions.",
     image: portfolioImage,
-    tags: ["WCAG 2.2", "NVDA", "ANDI", "Axe DevTools", "ARIA", "Keyboard Accessibility", "React", "Tailwind"],
+    tags: ["React", "Tailwind CSS", "Framer Motion", "JavaScript"],
     github: "https://github.com/rohitpanchal8535/My-Portfolio",
     live: "https://rohit-kumar-portfolio-lake.vercel.app/",
-  },
-  {
-    id: 3,
-    title: "Trader-Website",
-    description: "Trader website",
-    image: project3Image,
-    tags: ["React", "Tailwind", "JavaScript", "Framer Motion",],
-    github: "#",
-    live: "https://www.dilsetrader.in/",
-  },
-  
-  {
-    id: 5,
-    title: "Maching Inventory Website",
-    description: "Machine Inventory Management System with Enquiry Form",
-    image: project5Image,
-    tags: ["Wordpress, CPT, ACF, PHP"],
-    live: "https://stiplindia.com/"
   }
 ];
 
@@ -66,7 +64,7 @@ const ProjectSection = () => {
               My <span className='text-purple-400'>Projects</span>
             </h2>
             <p className='text-white text-lg max-w-2xl mx-auto drop-shadow-md'>
-              Explore my projects with a focus on accessibility testing and inclusive web development
+              Explore my collection of modern web applications and responsive projects built with React and modern technologies
             </p>
           </div>
         </div>

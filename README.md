@@ -1,17 +1,17 @@
-# Rohit Panchal - Accessibility Tester Portfolio
+# Rohit Panchal - Frontend Developer Portfolio
 
-A modern, responsive portfolio website showcasing my work as an accessibility tester. Built with React, Vite, and Tailwind CSS.
+A modern, responsive portfolio website showcasing my work as a frontend developer. Built with React, Vite, and Tailwind CSS.
 
 ## About
 
-I'm an accessibility tester specializing in ensuring web applications are inclusive and accessible to all users. This portfolio demonstrates my expertise in accessibility testing, frontend development, and quality assurance.
+I'm a passionate frontend developer specializing in building modern, responsive web applications. This portfolio demonstrates my expertise in frontend development, web design, and creating excellent user experiences.
 
 ## Features
 
 - **Responsive Design**: Optimized for all devices
-- **Accessibility Focused**: Built with accessibility best practices
 - **Modern UI**: Clean, professional design with smooth animations
 - **Interactive Elements**: Custom cursor, chatbot, and engaging user interactions
+- **Performance Optimized**: Fast loading and smooth user experience
 
 ## Technologies Used
 
@@ -23,13 +23,13 @@ I'm an accessibility tester specializing in ensuring web applications are inclus
 
 ## Skills Highlighted
 
-- **Frontend Development**: HTML, CSS, JavaScript, React, Redux
+- **Frontend Development**: HTML, CSS, JavaScript, React, Redux Toolkit
 - **Styling**: Tailwind CSS, Bootstrap
 - **Version Control**: Git, GitHub
-- **Testing Tools**: Axe DevTools
-- **Accessibility Tools**: NVDA, ANDI, WCAG 2.2, Keyboard Accessibility
-- **API Testing**: Postman
+- **API Integration**: RESTful APIs, Postman
+- **Animations**: Framer Motion
 - **CMS**: WordPress, Shopify
+- **Build Tools**: Vite
 
 ## Getting Started
 
@@ -40,4 +40,4 @@ I'm an accessibility tester specializing in ensuring web applications are inclus
 
 ## Contact
 
-Feel free to reach out for accessibility consulting, testing services, or collaboration opportunities.
+Feel free to reach out for web development projects, collaboration opportunities, or to discuss your next project.

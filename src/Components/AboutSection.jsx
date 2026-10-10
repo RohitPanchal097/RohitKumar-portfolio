@@ -21,9 +21,9 @@ const AboutSection = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
               <div className='space-y-6'>
-                <h3 className='text-2xl font-semibold'>Frontend Developer</h3>
+                <h3 className='text-2xl font-semibold'>Freelance Web Developer &amp; Accessibility Tester</h3>
           <p className='text-normal-contrast'>
-            I'm a passionate frontend developer with expertise in building modern web applications. I specialize in React, JavaScript, and CSS to create responsive, user-friendly interfaces. I focus on clean code, performance optimization, and delivering high-quality solutions that exceed expectations.
+            I work with clients to design, build, and improve websites and e-commerce experiences. My services include WordPress website development, Shopify store setup and customization, and accessibility testing against WCAG guidelines. I also build responsive interfaces with React and modern web technologies, with a focus on usability and inclusive experiences.
           </p>
 
           <div className='flex flex-col sm:flex-row gap-4 pt-4 justify-center'>
@@ -40,9 +40,9 @@ const AboutSection = () => {
               <Code className='w-6 h-6 text-primary' aria-hidden="true" />
               </div>
               <div className='text-left'>
-                <h4 className='text-lg font-semibold'>Web Development</h4>
+                <h4 className='text-lg font-semibold'>WordPress &amp; Shopify</h4>
                 <p className='text-normal-contrast'>
-                Building responsive, scalable web applications using React, JavaScript, and modern CSS frameworks. I create efficient, maintainable code and focus on delivering high-performance solutions that provide excellent user experiences.
+                Creating and customizing WordPress websites and Shopify stores, from responsive pages to polished product and shopping experiences.
                 </p>
               </div>
             </div>
@@ -53,9 +53,9 @@ const AboutSection = () => {
               <User className='w-6 h-6 text-primary' aria-hidden="true" />
               </div>
               <div className='text-left'>
-                <h4 className='text-lg font-semibold'>UI/Ux Design</h4>
+                <h4 className='text-lg font-semibold'>Accessibility Testing</h4>
                 <p className='text-normal-contrast'>
-                Designing intuitive user interfaces and seamless user experiences
+                Reviewing websites for accessibility with WCAG guidance, keyboard navigation, screen readers, NVDA, ANDI, and Axe DevTools.
                 </p>
               </div>
             </div>
@@ -66,9 +66,9 @@ const AboutSection = () => {
               <Briefcase className='w-6 h-6 text-primary' aria-hidden="true" />
               </div>
               <div className='text-left'>
-                <h4 className='text-lg font-semibold'>Project Management</h4>
+                <h4 className='text-lg font-semibold'>Freelance Collaboration</h4>
                 <p className='text-normal-contrast'>
-                Leading projects from conception to completion with agile methodologies.
+                Working directly with clients on new websites, store improvements, accessibility reviews, and ongoing updates.
                 </p>
               </div>
             </div>

@@ -22,11 +22,15 @@ const HeroSection = () => {
                     <span className='opacity-0 text-purple-400 animate-fade-in-delay-2 text-gradient ml-2'> Panchal</span>
                 </h1>
 
-                <p
-                className='text-lg md:text-xl text-normal-contrast max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3'
-                >
-                    I'm a passionate frontend developer crafting beautiful, responsive web applications. I specialize in modern web technologies like React, Tailwind CSS, and JavaScript to create engaging user experiences and high-performance solutions.
-                </p>
+                <div className='opacity-0 animate-fade-in-delay-3 space-y-3'>
+                    <p className='text-xl md:text-2xl font-semibold text-purple-300'>
+                        Freelance Web Developer <span className='text-normal-contrast'>|</span> WordPress &amp; Shopify Specialist
+                    </p>
+                    <p className='text-lg md:text-xl text-normal-contrast max-w-3xl mx-auto'>
+                        I build and manage websites and online stores, and test digital experiences for accessibility using WCAG guidelines and assistive technologies.
+                    </p>
+                    <p className='text-base md:text-lg font-medium text-normal-contrast'>Accessibility Tester · Open for freelance projects</p>
+                </div>
 
                 <div className='pt-4 opacity-0 animate-fade-in-delay-4'>
                     <a href="#projects"

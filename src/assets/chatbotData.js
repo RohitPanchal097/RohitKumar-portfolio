@@ -5,7 +5,7 @@ export const chatbot = [
   },
   {
     question: "What services do you offer?",
-    answer: "I offer frontend web development, responsive UI design, and performance optimization services. I create modern web applications, design intuitive user interfaces, and help bring your projects to life using the latest web technologies."
+    answer: "I'm a freelancer offering WordPress website development, Shopify store setup and customization, frontend development, and accessibility testing. I can help build or improve your website, online store, and inclusive user experience."
   },
   {
     question: "How can I contact you?",
@@ -13,7 +13,7 @@ export const chatbot = [
   },
   {
     question: "What makes you different as a developer?",
-    answer: "I'm a passionate frontend developer with a strong focus on creating beautiful, responsive, and performant web applications. I'm a quick learner who stays updated with modern web technologies and believes in clean, maintainable code and excellent user experiences."
+    answer: "I combine freelance web development with WordPress and Shopify experience and accessibility testing. I care about responsive design, inclusive experiences, and practical solutions tailored to each client."
   },
   {
     question: "Do you work on e-commerce projects?",

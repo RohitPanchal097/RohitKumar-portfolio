@@ -6,7 +6,26 @@ import project4Image from "../assets/project-4.png";
 import project3Image from "../assets/trader-website.png";
 import project1Image from "../assets/project-1.png";
 import project5Image from "../assets/Stiplindia.png";
+import NGOwebsite from "../assets/NGO-website.png";
+import Clothingstore from "../assets/clothing-store.png";
+
 const projects = [
+  {
+    id: 6,
+    title: "Parivaar Self Care Team",
+    description: "A WordPress website for an NGO supporting people with community assistance and social services.",
+    image: NGOwebsite,
+    tags: ["WordPress", "NGO Website"],
+    live: "https://psctup.in/",
+  },
+  {
+    id: 7,
+    title: "Rare Naari Clothing Store",
+    description: "A Shopify clothing store featuring women's co-ord sets and ethnic wear.",
+    image: Clothingstore,
+    tags: ["Shopify", "E-commerce", "Clothing Store"],
+    live: "https://rarenaari.com/",
+  },
   {
     id: 1,
     title: "Trader-Website",
@@ -16,14 +35,7 @@ const projects = [
     github: "#",
     live: "https://www.dilsetrader.in/",
   },
-  {
-    id: 2,
-    title: "Maching Inventory Website",
-    description: "Machine Inventory Management System with Enquiry Form",
-    image: project5Image,
-    tags: ["Wordpress, CPT, ACF, PHP"],
-    live: "https://stiplindia.com/"
-  },
+  
   {
     id: 3,
     title: "Movie-Website",
@@ -42,6 +54,14 @@ const projects = [
      github: "https://github.com/RohitPanchal097/Gym-Website-React",
      live: "https://gym-website-wheat-nine.vercel.app/"
 
+  },
+  {
+    id: 2,
+    title: "Maching Inventory Website",
+    description: "Machine Inventory Management System with Enquiry Form",
+    image: project5Image,
+    tags: ["Wordpress, CPT, ACF, PHP"],
+    live: "https://stiplindia.com/"
   },
   {
     id: 5,
@@ -70,9 +90,9 @@ const ProjectSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {projects.map((project) => (
             <div
-              key={key}
+              key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadaow-xs card-hover "
             >
               <div className="h-48 overflow-hidden">
@@ -95,14 +115,16 @@ const ProjectSection = () => {
               <p className="text-normal-contrast text-sm mb-4">{project.description}</p>
               <div className="flex justify-between items-center px-6 pb-4">
                 <div className="flex space-x-2">
-                  <a href={project.live} target="_blank" rel="noopener noreferrer" role="link" className="text-normal-contrast hover:text-primary transition-colors duration-300" aria-label={`View ${project.title} live project`}>
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-normal-contrast hover:text-primary transition-colors duration-300" aria-label={`View ${project.title} live project`}>
                   <ExternalLink size={20} aria-hidden="true" />
                   <span className="sr-only">View {project.title} live project</span>
                   </a>
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" role="link" className="text-normal-contrast hover:text-primary transition-colors duration-300" aria-label={`View ${project.title} on GitHub`}>
-                  <Github size={20} aria-hidden="true" />
-                  <span className="sr-only">View {project.title} on GitHub</span>
-                  </a>
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-normal-contrast hover:text-primary transition-colors duration-300" aria-label={`View ${project.title} on GitHub`}>
+                      <Github size={20} aria-hidden="true" />
+                      <span className="sr-only">View {project.title} on GitHub</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
